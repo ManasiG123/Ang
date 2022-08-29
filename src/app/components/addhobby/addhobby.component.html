@@ -1,0 +1,5 @@
+<!--<p>addhobby works!</p>-->
+<body>
+<label for="newhobby">New hobby</label>
+<input #hobby [value]="myhobby" type="text" class="form-control" id="newhobby" (keyup.enter)="addhobby(hobby.value)">
+</body>

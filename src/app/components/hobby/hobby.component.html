@@ -1,0 +1,14 @@
+<!-- <p>hobby works!</p> -->
+<body>
+    <ul class="list-group" *ngFor="let x of myhobby; let i=index">
+        <li class="list-group-item" *ngIf="x.fav==0" >
+          <p> this is the best game  {{x.name | mypipe}}</p> 
+            <button class="btn btn-primary" (click)="delhobby(i)">Remove</button> 
+            <button class="btn btn-info" (click)="afav(i)" >Favorite List</button>
+        </li>
+    </ul>
+    
+    
+    
+    </body>
+    

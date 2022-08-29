@@ -1,0 +1,97 @@
+<!--<body>
+ {{title}}
+  <hr/>
+
+ 
+  
+  <table class="table table-bordered">
+  <tr>
+    <td>s1</td><td [attr.colspan]="col">Name</td>
+  </tr>
+  
+  </table>
+  <ul class="list-group">
+    <li class="list-group-item" [class.active]="isActive">Link1</li>
+    <li class="list-group-item">Link2</li>
+    <li class="list-group-item">Link3</li>
+  </ul> -->
+  
+  <!-- <input #abc type="text" class="form-control" (keyup.enter)="test(abc.value);"/> 
+  {{invalue}}
+  <input [(ngModel)]="email" type="text" class="form-control"  /> 
+  {{email}}
+  
+  <input [(ngModel)]="currency" type="text" class="form-control"/>
+  {{currency | currency:'EUR'}}
+  
+  <input [(ngModel)]="dob" type="date" class="form-control" />
+  {{dob |date:'fullDate'}}    
+  
+  <button class="btn btn-info" >Add</button> -->
+  
+ <!-- <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Home</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Profile</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Contact</button>
+    </li>-->
+    <!-- <li class="nav-item" role="presentation">
+      <button class="nav-link" id="pills-disabled-tab" data-bs-toggle="pill" data-bs-target="#pills-disabled" type="button" role="tab" aria-controls="pills-disabled" aria-selected="false" disabled>Disabled</button>
+    </li> -->
+  <!--</ul>
+  <div class="tab-content" id="pills-tabContent">
+    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">Home</div>
+    <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">Profile</div>
+    <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab" tabindex="0">Contact</div>-->
+    <!-- <div class="tab-pane fade" id="pills-disabled" role="tabpanel" aria-labelledby="pills-disabled-tab" tabindex="0">...</div> -->
+  <!--</div>
+<hr/>-->
+<!-- <input [(ngModel)]="email"/> -->
+
+<!--<input #hobby type="text" (keyup.enter)="addHobby(hobby.value)"/>
+<div *ngFor="let x of hobbies">
+  {{x.name}}
+</div>-->
+<!-- <button class="delete" onclick="deleteHobby(hobby.value)">Remove</button> -->
+<!--<div *ngIf="!isLoggedin">
+  <app-login></app-login>
+</div>-->
+  
+  
+<!--<a href="#" (click)="updatelnk('hobby')">Hobby</a> | <a href="#" (click)="updatelnk('addhobby')">Add Hobby</a> | 
+<app-home [msg]="lnk" [hobbylist]="hobbies" (newhobby)="addHobby($event)" (remhobby)="deletehobby($event)"></app-home>
+</body>-->
+
+
+
+<body>
+  <ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link" href="#" (click)="updatelnk('hobby')">Hobby</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#"(click)="updatelnk('addhobby')">Add Hobby</a> 
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#" (click)="updatelnk('fav')">My Favorite</a>
+  </li>
+  
+</ul>
+ <app-home 
+  [msg]="lnk" 
+  [hobbylist]="hobbies" 
+  (newhobby)="addHobby($event)" 
+  (newdelhobby)="delhobby($event)" 
+  (addfav)="addtofav($event)"
+  [myfav]="hobbies"
+  (rmvfav)="removefav($event)"
+  ></app-home>
+
+
+  <p>Phone: {{ phoneNumber | phoneFormat }}</p> 
+
+ </body> 
